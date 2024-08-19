@@ -1,0 +1,32 @@
+<!-- Interactive Exercise
+
+Create a list of items and a button. When the button is clicked, use getElementsByClassName or getElementsByTagName 
+to change the color of all items in the list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="item">ITEM 1</li>
+        <li class="item">ITEM 2</li>
+        <li class="item">ITEM 3</li>
+        <li class="item">ITEM 4</li>
+        <li class="item">ITEM 5</li>
+    </ul>
+    <button onclick="changeColor()">Change</button>
+</body>
+<script>
+    function changeColor() {
+        let items = document.getElementsByTagName("li");
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.color = "blue";         
+        }
+    }
+</script>
+</html>

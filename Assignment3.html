@@ -1,0 +1,45 @@
+<!-- Count Elements
+
+Use getElementsByClassName or getElementsByTagName to count how many elements of a particular class or tag exist on a page.
+Display the count on the webpage using JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para1">
+        Lorem ipsum dolor sit.
+    </p>
+    <p class="para1">
+        Lorem ipsum dolor sit.
+    </p>
+    <p class="para1">
+        Lorem ipsum dolor sit.
+    </p>
+    <p class="para2">
+        Lorem ipsum dolor sit amet consectetur.
+    </p>
+    <p class="para2">
+        Lorem ipsum dolor sit amet consectetur.
+    </p>
+    <button onclick="count()">
+        count
+    </button>
+    <p id="count-result"></p>
+</body>
+    <script>
+        function count () {
+            let para1 = document.getElementsByClassName("para1")
+            let para2 = document.getElementsByClassName("para2")
+
+            // alert("para1 = " + para1.length + "para2 = " + para2.length)
+            document.getElementById("count-result").innerHTML = 
+            "Number of Paragraph 1: " + para1.length + "\n" + 
+            "Number of Paragraph 2: " + para2.length
+        }
+    </script>
+</html>

@@ -1,0 +1,43 @@
+<!-- Change Multiple Elements
+
+Write a script that selects all elements with a certain class name and changes their background color and text content. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+        <p class="paragraph">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At excepturi velit cupiditate!
+        </p>
+    </div>
+    <div class="div">
+        <p class="paragraph">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At excepturi velit cupiditate!
+        </p>
+    </div>
+    <div class="div">
+        <p class="paragraph">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At excepturi velit cupiditate!
+        </p>
+    </div>
+    <button onclick="changeElements()">
+        Change
+    </button>
+</body>
+<script>
+    function changeElements() {
+        var div = document.getElementsByClassName("paragraph");
+
+        for (let i = 0; i < div.length; i++) {
+            div[i].style.backgroundColor = "green";
+            div[i].innerHTML = "Changed Like Magic" + i + 1;
+        }
+    }
+</script>
+</html>

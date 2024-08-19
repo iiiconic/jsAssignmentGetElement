@@ -1,0 +1,34 @@
+<!-- Basic Selection
+
+Create an HTML page with multiple elements: an element with an id, several elements with the same class, and several elements of the same tag (e.g., <p> tags).
+Use JavaScript to select these elements using getElementById, getElementsByClassName, and getElementsByTagName.
+Modify the content or style of each selected element. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <p class="paragraph">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="paragraph">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="paragraph">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+    </div>
+    
+</body>
+<script>
+    document.getElementById("div").style.backgroundColor = "red"
+    var para = document.getElementsByClassName("paragraph");
+    para[0,1,2].style.color = "white"
+</script>
+</html>
